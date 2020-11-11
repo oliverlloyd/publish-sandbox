@@ -1,5 +1,6 @@
 {
     "name": "@guardian/example-rendering",
+    "repository": "https://github.com/oliverlloyd/publish-sandbox",
     "version": "0.0.0",
     "source": "src/index.ts",
     "main": "dist/index.js",
@@ -15,7 +16,12 @@
         "build-storybook": "build-storybook",
         "tsc": "tsc",
         "lint": "eslint . --ext .ts",
-        "test": "jest --watch"
+        "test": "jest",
+        "validate": "yarn tsc && yarn test && yarn lint",
+        "chromatic": "chromatic",
+        "preversion": "yarn validate",
+        "postversion": "git push --tags && yarn publish . --tag $npm_package_version && git push && yarn open-releases",
+        "open-releases": "open \"$(node -e 'console.log(`${require(\"./package.json\").repository}/releases`)')\""
     },
     "devDependencies": {
         "@babel/core": "^7.9.6",
