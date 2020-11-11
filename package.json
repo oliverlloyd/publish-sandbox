@@ -1,7 +1,7 @@
 {
-    "name": "@guardian/example-rendering",
+    "name": "publish-sandbox",
     "repository": "https://github.com/oliverlloyd/publish-sandbox",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "source": "src/index.ts",
     "main": "dist/index.js",
     "module": "dist/index.modern.js",
@@ -20,7 +20,7 @@
         "validate": "yarn tsc && yarn test && yarn lint",
         "chromatic": "chromatic",
         "preversion": "yarn validate",
-        "postversion": "git push --tags && yarn publish . --tag $npm_package_version && git push && yarn open-releases",
+        "postversion": "git push --tags && git push && yarn open-releases",
         "open-releases": "open \"$(node -e 'console.log(`${require(\"./package.json\").repository}/releases`)')\""
     },
     "devDependencies": {
