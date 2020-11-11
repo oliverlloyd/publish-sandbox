@@ -1,7 +1,7 @@
 {
     "name": "publish-sandbox",
     "repository": "https://github.com/oliverlloyd/publish-sandbox",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "source": "src/index.ts",
     "main": "dist/index.js",
     "module": "dist/index.modern.js",
