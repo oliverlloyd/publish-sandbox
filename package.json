@@ -4,7 +4,7 @@
         "type": "ssh",
         "url": "https://github.com/oliverlloyd/publish-sandbox"
     },
-    "version": "1.1.8",
+    "version": "1.1.9",
     "source": "src/index.ts",
     "main": "dist/index.js",
     "module": "dist/index.modern.js",
