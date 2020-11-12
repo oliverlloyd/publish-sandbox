@@ -4,7 +4,7 @@
         "type": "ssh",
         "url": "https://github.com/oliverlloyd/publish-sandbox"
     },
-    "version": "1.1.10",
+    "version": "1.1.11",
     "source": "src/index.ts",
     "main": "dist/index.js",
     "module": "dist/index.modern.js",
@@ -24,7 +24,7 @@
         "chromatic": "chromatic",
         "release": "yarn version",
         "preversion": "yarn validate",
-        "postversion": "HUSKY_SKIP_HOOKS=1 git push --tags && HUSKY_SKIP_HOOKS=1 git push && npm publish --dry-run && echo \"Successfully released version $npm_package_version!\" && echo \"$npm_package_repository_url/releases\" && yarn open-releases",
+        "postversion": "HUSKY_SKIP_HOOKS=1 git push --tags && git push && npm publish --dry-run && echo \"Successfully released version $npm_package_version!\" && echo \"$npm_package_repository_url/releases\" && yarn open-releases",
         "open-releases": "open \"$(node -e 'console.log(`${require(\"./package.json\").repository}/releases`)')\""
     },
     "devDependencies": {
